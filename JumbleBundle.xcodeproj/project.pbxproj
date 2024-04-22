@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD17D56B2BD654AC00794232 /* TestCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD17D5692BD654AC00794232 /* TestCollectionViewCell.xib */; };
 		BD51A7B52BD61AEB00106A31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD51A7B42BD61AEB00106A31 /* AppDelegate.swift */; };
 		BD51A7B72BD61AEB00106A31 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD51A7B62BD61AEB00106A31 /* SceneDelegate.swift */; };
-		BD51A7B92BD61AEB00106A31 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD51A7B82BD61AEB00106A31 /* ViewController.swift */; };
+		BD51A7B92BD61AEB00106A31 /* HubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD51A7B82BD61AEB00106A31 /* HubViewController.swift */; };
 		BD51A7BC2BD61AEB00106A31 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = BD51A7BB2BD61AEB00106A31 /* Base */; };
 		BD51A7BE2BD61AEC00106A31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD51A7BD2BD61AEC00106A31 /* Assets.xcassets */; };
 		BD51A7C12BD61AEC00106A31 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = BD51A7C02BD61AEC00106A31 /* Base */; };
 		BD51A7CC2BD61AED00106A31 /* JumbleBundleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD51A7CB2BD61AED00106A31 /* JumbleBundleTests.swift */; };
 		BD51A7D62BD61AED00106A31 /* JumbleBundleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD51A7D52BD61AED00106A31 /* JumbleBundleUITests.swift */; };
 		BD51A7D82BD61AED00106A31 /* JumbleBundleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD51A7D72BD61AED00106A31 /* JumbleBundleUITestsLaunchTests.swift */; };
+		BD89F05C2BD6278000C26AAC /* HubCollectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD89F05B2BD6278000C26AAC /* HubCollectionItem.swift */; };
+		BD89F05E2BD6282800C26AAC /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD89F05D2BD6282800C26AAC /* TestViewController.swift */; };
+		BD89F0612BD62D2D00C26AAC /* TestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD89F05F2BD62D2D00C26AAC /* TestCollectionViewCell.swift */; };
+		BD89F0662BD63ACD00C26AAC /* Titles.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD89F0652BD63ACD00C26AAC /* Titles.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +41,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BD17D5692BD654AC00794232 /* TestCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestCollectionViewCell.xib; sourceTree = "<group>"; };
 		BD51A7B12BD61AEB00106A31 /* JumbleBundle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JumbleBundle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD51A7B42BD61AEB00106A31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD51A7B62BD61AEB00106A31 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BD51A7B82BD61AEB00106A31 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BD51A7B82BD61AEB00106A31 /* HubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HubViewController.swift; sourceTree = "<group>"; };
 		BD51A7BB2BD61AEB00106A31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BD51A7BD2BD61AEC00106A31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD51A7C02BD61AEC00106A31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +55,10 @@
 		BD51A7D12BD61AED00106A31 /* JumbleBundleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JumbleBundleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD51A7D52BD61AED00106A31 /* JumbleBundleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JumbleBundleUITests.swift; sourceTree = "<group>"; };
 		BD51A7D72BD61AED00106A31 /* JumbleBundleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JumbleBundleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BD89F05B2BD6278000C26AAC /* HubCollectionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HubCollectionItem.swift; sourceTree = "<group>"; };
+		BD89F05D2BD6282800C26AAC /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		BD89F05F2BD62D2D00C26AAC /* TestCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCollectionViewCell.swift; sourceTree = "<group>"; };
+		BD89F0652BD63ACD00C26AAC /* Titles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Titles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +111,10 @@
 			children = (
 				BD51A7B42BD61AEB00106A31 /* AppDelegate.swift */,
 				BD51A7B62BD61AEB00106A31 /* SceneDelegate.swift */,
-				BD51A7B82BD61AEB00106A31 /* ViewController.swift */,
+				BD89F05B2BD6278000C26AAC /* HubCollectionItem.swift */,
+				BD89F0652BD63ACD00C26AAC /* Titles.swift */,
+				BD89F0632BD6300700C26AAC /* View */,
+				BD89F0642BD6301300C26AAC /* Screen */,
 				BD51A7BA2BD61AEB00106A31 /* Main.storyboard */,
 				BD51A7BD2BD61AEC00106A31 /* Assets.xcassets */,
 				BD51A7BF2BD61AEC00106A31 /* LaunchScreen.storyboard */,
@@ -125,6 +138,24 @@
 				BD51A7D72BD61AED00106A31 /* JumbleBundleUITestsLaunchTests.swift */,
 			);
 			path = JumbleBundleUITests;
+			sourceTree = "<group>";
+		};
+		BD89F0632BD6300700C26AAC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BD89F05F2BD62D2D00C26AAC /* TestCollectionViewCell.swift */,
+				BD17D5692BD654AC00794232 /* TestCollectionViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BD89F0642BD6301300C26AAC /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				BD51A7B82BD61AEB00106A31 /* HubViewController.swift */,
+				BD89F05D2BD6282800C26AAC /* TestViewController.swift */,
+			);
+			path = Screen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +264,7 @@
 			files = (
 				BD51A7BE2BD61AEC00106A31 /* Assets.xcassets in Resources */,
 				BD51A7C12BD61AEC00106A31 /* Base in Resources */,
+				BD17D56B2BD654AC00794232 /* TestCollectionViewCell.xib in Resources */,
 				BD51A7BC2BD61AEB00106A31 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,7 +290,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD51A7B92BD61AEB00106A31 /* ViewController.swift in Sources */,
+				BD89F0612BD62D2D00C26AAC /* TestCollectionViewCell.swift in Sources */,
+				BD89F05E2BD6282800C26AAC /* TestViewController.swift in Sources */,
+				BD89F05C2BD6278000C26AAC /* HubCollectionItem.swift in Sources */,
+				BD51A7B92BD61AEB00106A31 /* HubViewController.swift in Sources */,
+				BD89F0662BD63ACD00C26AAC /* Titles.swift in Sources */,
 				BD51A7B52BD61AEB00106A31 /* AppDelegate.swift in Sources */,
 				BD51A7B72BD61AEB00106A31 /* SceneDelegate.swift in Sources */,
 			);
@@ -457,6 +493,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jack.lee.JumbleBundle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -485,6 +524,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jack.lee.JumbleBundle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
