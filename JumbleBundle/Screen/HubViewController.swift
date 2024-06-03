@@ -17,7 +17,7 @@ class HubViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = Title.overall.rawValue
+//        navigationItem.title = Title.overall.rawValue
         configureCollectionview()
     }
     
@@ -26,6 +26,7 @@ class HubViewController: UIViewController {
         view.addSubview(collectionview)
         self.hubCollectionView = collectionview
         
+        collectionview.backgroundColor = .yellow
         collectionview.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         let nib = UINib(nibName: TestCollectionViewCell.reuseIdentifier, bundle: nil)
         collectionview.register(nib, forCellWithReuseIdentifier: TestCollectionViewCell.reuseIdentifier)
@@ -51,35 +52,36 @@ class HubViewController: UIViewController {
 
 extension HubViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return Title.allCases.count
+//        return Title.allCases.count
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TestCollectionViewCell.reuseIdentifier, for: indexPath) as! TestCollectionViewCell
         
-        let title = Title.allCases[indexPath.item]
-        cell.configureLabel(text: title.rawValue)
+//        let title = Title.allCases[indexPath.item]
+//        cell.configureLabel(text: title.rawValue)
         return cell
     }
 }
 
 extension HubViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let title = Title.allCases[indexPath.item].rawValue
+//        let title = Title.allCases[indexPath.item].rawValue
         
         print(indexPath)
         
         switch indexPath.item {
-        case 0:
-            let nextVC = TestViewController()
-            nextVC.title = title
-            self.navigationController?.pushViewController(nextVC, animated: true)
-        case 1:
-            let nextVC = TestViewController()
-            nextVC.title = title
-            nextVC.view.backgroundColor = .green
-            self.navigationController?.pushViewController(nextVC, animated: true)
+//        case 0:
+//            let nextVC = Tableviewcontro()
+//            nextVC.title = title
+//            self.navigationController?.pushViewController(nextVC, animated: true)
+//        case 1:
+//            let nextVC = Tableviewcontro()
+//            nextVC.title = title
+//            nextVC.view.backgroundColor = .green
+//            self.navigationController?.pushViewController(nextVC, animated: true)
         default:
             return
         }
