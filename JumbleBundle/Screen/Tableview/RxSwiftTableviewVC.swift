@@ -10,7 +10,8 @@ import UIKit
 class RxSwiftTableviewVC: UITableViewController {
 
     private var vcData: [VCData] = [
-        VCData(title: "Observing Observables", vc: RxObservingObservablesVC())
+        VCData(title: "Ch 1. Observing Observables", vc: RxObservingObservablesVC()),
+        VCData(title: "Ch 1. Factory Observables", vc: FactoryObservableVC())
     ]
     
     override func viewDidLoad() {
@@ -20,10 +21,6 @@ class RxSwiftTableviewVC: UITableViewController {
     }
 
     // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return vcData.count
-    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return vcData.count

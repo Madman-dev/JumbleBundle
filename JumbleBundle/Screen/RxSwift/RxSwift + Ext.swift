@@ -5,9 +5,9 @@
 //  Created by Porori on 6/5/24.
 //
 
-import Foundation
+import UIKit
 
-extension RxObservingObservablesVC {
+extension UIViewController {
     public func example(of description: String, action: () -> Void) {
         print("\n--- Example of:", description, "---")
         action()
