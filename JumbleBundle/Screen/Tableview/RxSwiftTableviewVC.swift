@@ -11,7 +11,8 @@ class RxSwiftTableviewVC: UITableViewController {
 
     private var vcData: [VCData] = [
         VCData(title: "Ch 1. Observing Observables", vc: RxObservingObservablesVC()),
-        VCData(title: "Ch 1. Factory Observables", vc: FactoryObservableVC())
+        VCData(title: "Ch 1. Factory Observables", vc: FactoryObservableVC()),
+        VCData(title: "Ch 1. Trait VC", vc: TraitsVC())
     ]
     
     override func viewDidLoad() {
