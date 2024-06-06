@@ -19,10 +19,12 @@
 		BD51A7D82BD61AED00106A31 /* JumbleBundleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD51A7D72BD61AED00106A31 /* JumbleBundleUITestsLaunchTests.swift */; };
 		BD7714632C0D835900E30EBB /* RxSwiftTableviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7714622C0D835900E30EBB /* RxSwiftTableviewVC.swift */; };
 		BD7714652C0D839E00E30EBB /* VCData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7714642C0D839E00E30EBB /* VCData.swift */; };
-		BD7714672C0D84B800E30EBB /* RxBasicVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7714662C0D84B800E30EBB /* RxBasicVC.swift */; };
+		BD7714672C0D84B800E30EBB /* RxObservingObservablesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7714662C0D84B800E30EBB /* RxObservingObservablesVC.swift */; };
 		BD77146A2C0D8D9200E30EBB /* MainVC + tableview Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7714692C0D8D9200E30EBB /* MainVC + tableview Ext.swift */; };
+		BD77146F2C0D900700E30EBB /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BD77146E2C0D900700E30EBB /* RxSwift */; };
 		BD89F05C2BD6278000C26AAC /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD89F05B2BD6278000C26AAC /* MainVC.swift */; };
 		BD89F0612BD62D2D00C26AAC /* TestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD89F05F2BD62D2D00C26AAC /* TestCollectionViewCell.swift */; };
+		BDAE42D52C1006830031EB5B /* RxSwift + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAE42D42C1006830031EB5B /* RxSwift + Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,10 +61,11 @@
 		BD51A7D72BD61AED00106A31 /* JumbleBundleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JumbleBundleUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BD7714622C0D835900E30EBB /* RxSwiftTableviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftTableviewVC.swift; sourceTree = "<group>"; };
 		BD7714642C0D839E00E30EBB /* VCData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCData.swift; sourceTree = "<group>"; };
-		BD7714662C0D84B800E30EBB /* RxBasicVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxBasicVC.swift; sourceTree = "<group>"; };
+		BD7714662C0D84B800E30EBB /* RxObservingObservablesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxObservingObservablesVC.swift; sourceTree = "<group>"; };
 		BD7714692C0D8D9200E30EBB /* MainVC + tableview Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainVC + tableview Ext.swift"; sourceTree = "<group>"; };
 		BD89F05B2BD6278000C26AAC /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		BD89F05F2BD62D2D00C26AAC /* TestCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCollectionViewCell.swift; sourceTree = "<group>"; };
+		BDAE42D42C1006830031EB5B /* RxSwift + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RxSwift + Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD77146F2C0D900700E30EBB /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,10 +186,19 @@
 			children = (
 				BD7714682C0D8D4000E30EBB /* MainVC */,
 				BD77146C2C0D8E4A00E30EBB /* Tableview */,
-				BD7714662C0D84B800E30EBB /* RxBasicVC.swift */,
+				BDAE42D32C1006750031EB5B /* RxSwift */,
 				BD51A7B82BD61AEB00106A31 /* HubViewController.swift */,
 			);
 			path = Screen;
+			sourceTree = "<group>";
+		};
+		BDAE42D32C1006750031EB5B /* RxSwift */ = {
+			isa = PBXGroup;
+			children = (
+				BD7714662C0D84B800E30EBB /* RxObservingObservablesVC.swift */,
+				BDAE42D42C1006830031EB5B /* RxSwift + Ext.swift */,
+			);
+			path = RxSwift;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +217,9 @@
 			dependencies = (
 			);
 			name = JumbleBundle;
+			packageProductDependencies = (
+				BD77146E2C0D900700E30EBB /* RxSwift */,
+			);
 			productName = JumbleBundle;
 			productReference = BD51A7B12BD61AEB00106A31 /* JumbleBundle.app */;
 			productType = "com.apple.product-type.application";
@@ -276,6 +292,9 @@
 				Base,
 			);
 			mainGroup = BD51A7A82BD61AEB00106A31;
+			packageReferences = (
+				BD77146D2C0D900700E30EBB /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = BD51A7B22BD61AEB00106A31 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -323,10 +342,11 @@
 				BD89F0612BD62D2D00C26AAC /* TestCollectionViewCell.swift in Sources */,
 				BD7714632C0D835900E30EBB /* RxSwiftTableviewVC.swift in Sources */,
 				BD7714652C0D839E00E30EBB /* VCData.swift in Sources */,
-				BD7714672C0D84B800E30EBB /* RxBasicVC.swift in Sources */,
+				BD7714672C0D84B800E30EBB /* RxObservingObservablesVC.swift in Sources */,
 				BD89F05C2BD6278000C26AAC /* MainVC.swift in Sources */,
 				BD51A7B92BD61AEB00106A31 /* HubViewController.swift in Sources */,
 				BD77146A2C0D8D9200E30EBB /* MainVC + tableview Ext.swift in Sources */,
+				BDAE42D52C1006830031EB5B /* RxSwift + Ext.swift in Sources */,
 				BD51A7B52BD61AEB00106A31 /* AppDelegate.swift in Sources */,
 				BD51A7B72BD61AEB00106A31 /* SceneDelegate.swift in Sources */,
 			);
@@ -681,6 +701,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BD77146D2C0D900700E30EBB /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BD77146E2C0D900700E30EBB /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD77146D2C0D900700E30EBB /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BD51A7A92BD61AEB00106A31 /* Project object */;
 }

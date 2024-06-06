@@ -10,12 +10,11 @@ import UIKit
 class RxSwiftTableviewVC: UITableViewController {
 
     private var vcData: [VCData] = [
-        VCData(title: "RxSwift Basics", vc: RxBasicVC())
+        VCData(title: "Observing Observables", vc: RxObservingObservablesVC())
     ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .blue
         tableView.delegate = self
         tableView.dataSource = self
     }
