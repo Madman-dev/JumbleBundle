@@ -11,7 +11,8 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var tableView = UITableView()
     var vcData: [VCData] = [
-        VCData(title: "RxSwift", vc: RxSwiftTableviewVC())
+        VCData(title: "RxSwift", vc: RxSwiftTableviewVC()),
+        VCData(title: "CA", vc: CleanArchitectureTableView())
     ]
     
     override func viewDidLoad() {
