@@ -9,6 +9,7 @@ import UIKit
 
 class RxSwiftTableviewVC: UITableViewController {
 
+    weak var coordinator: RxSwiftCoordinator?
     private var vcData: [VCData] = [
         VCData(title: "Ch 1. Observing Observables", vc: RxObservingObservablesVC()),
         VCData(title: "Ch 1. Factory Observables", vc: FactoryObservableVC()),
@@ -19,6 +20,12 @@ class RxSwiftTableviewVC: UITableViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    override func viewIsAppearing(_ animated: Bool) {
+        super.viewIsAppearing(animated)
+        print("rxSwift에서 child 갯수는: ", coordinator?.childCoordinator.count)
+        print("rxSwift에서 navigation 갯수는: ", coordinator?.navigationController.viewControllers.count)
     }
 
     // MARK: - Table view data source
@@ -34,8 +41,8 @@ class RxSwiftTableviewVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = vcData[indexPath.row].vc
-        vc.title = vcData[indexPath.row].title
-        self.navigationController?.pushViewController(vc, animated: true)
+        let nextVC = vcData[indexPath.row].vc
+        nextVC.title = vcData[indexPath.row].title
+//        coordinator?.moveToViewController(vc: nextVC)
     }
 }

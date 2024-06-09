@@ -11,6 +11,8 @@ import RxSwift
 
 class RxObservingObservablesVC: UIViewController {
     
+    weak var coordinator: MainCoordinator?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white

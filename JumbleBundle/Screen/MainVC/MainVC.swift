@@ -9,6 +9,7 @@ import UIKit
 
 class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    weak var coordinator: MainCoordinator?
     var tableView = UITableView()
     var vcData: [VCData] = [
         VCData(title: "RxSwift", vc: RxSwiftTableviewVC()),
@@ -19,6 +20,12 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         super.viewDidLoad()
         setup()
         addTableview()
+    }
+    
+    override func viewIsAppearing(_ animated: Bool) {
+        super.viewIsAppearing(animated)
+        print("main에서 child 갯수는: ",coordinator?.childCoordinator.count)
+        print("main에서 navigation 갯수는: ",coordinator?.navigationController.viewControllers.count)
     }
     
     func setup() {

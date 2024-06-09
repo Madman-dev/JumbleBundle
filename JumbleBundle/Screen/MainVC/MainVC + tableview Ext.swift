@@ -20,8 +20,9 @@ extension MainVC {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = vcData[indexPath.row].vc
-        vc.title = vcData[indexPath.row].title
-        self.navigationController?.pushViewController(vc, animated: true)
+        let nextVC = vcData[indexPath.row].vc
+        nextVC.title = vcData[indexPath.row].title
+        coordinator?.moveToSelectedRow(nextVC)
+        tableView.deselectRow(at: indexPath, animated: false)
     }
 }

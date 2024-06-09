@@ -20,7 +20,9 @@
 		BD51A7CC2BD61AED00106A31 /* JumbleBundleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD51A7CB2BD61AED00106A31 /* JumbleBundleTests.swift */; };
 		BD51A7D62BD61AED00106A31 /* JumbleBundleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD51A7D52BD61AED00106A31 /* JumbleBundleUITests.swift */; };
 		BD51A7D82BD61AED00106A31 /* JumbleBundleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD51A7D72BD61AED00106A31 /* JumbleBundleUITestsLaunchTests.swift */; };
-		BD6D47142C1584E80028E812 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6D47132C1584E80028E812 /* MainCoordinator.swift */; };
+		BD6A52E62C15CACF00CD7781 /* RxSwiftCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6A52E52C15CACF00CD7781 /* RxSwiftCoordinator.swift */; };
+		BD6A52E82C15CD6000CD7781 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6A52E72C15CD6000CD7781 /* MainCoordinator.swift */; };
+		BD6D47142C1584E80028E812 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6D47132C1584E80028E812 /* Coordinator.swift */; };
 		BD7714632C0D835900E30EBB /* RxSwiftTableviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7714622C0D835900E30EBB /* RxSwiftTableviewVC.swift */; };
 		BD7714652C0D839E00E30EBB /* VCData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7714642C0D839E00E30EBB /* VCData.swift */; };
 		BD7714672C0D84B800E30EBB /* RxObservingObservablesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7714662C0D84B800E30EBB /* RxObservingObservablesVC.swift */; };
@@ -70,7 +72,9 @@
 		BD51A7D12BD61AED00106A31 /* JumbleBundleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JumbleBundleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD51A7D52BD61AED00106A31 /* JumbleBundleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JumbleBundleUITests.swift; sourceTree = "<group>"; };
 		BD51A7D72BD61AED00106A31 /* JumbleBundleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JumbleBundleUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		BD6D47132C1584E80028E812 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		BD6A52E52C15CACF00CD7781 /* RxSwiftCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftCoordinator.swift; sourceTree = "<group>"; };
+		BD6A52E72C15CD6000CD7781 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		BD6D47132C1584E80028E812 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		BD7714622C0D835900E30EBB /* RxSwiftTableviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftTableviewVC.swift; sourceTree = "<group>"; };
 		BD7714642C0D839E00E30EBB /* VCData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCData.swift; sourceTree = "<group>"; };
 		BD7714662C0D84B800E30EBB /* RxObservingObservablesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxObservingObservablesVC.swift; sourceTree = "<group>"; };
@@ -113,6 +117,11 @@
 		BD006F4F2C120EE300193D38 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BD51A7BA2BD61AEB00106A31 /* Main.storyboard */,
+				BD51A7BD2BD61AEC00106A31 /* Assets.xcassets */,
+				BD51A7BF2BD61AEC00106A31 /* LaunchScreen.storyboard */,
+				BD51A7B42BD61AEB00106A31 /* AppDelegate.swift */,
+				BD51A7B62BD61AEB00106A31 /* SceneDelegate.swift */,
 				BD006F502C120F1700193D38 /* Blah.txt */,
 			);
 			path = Resources;
@@ -142,15 +151,10 @@
 			isa = PBXGroup;
 			children = (
 				BD6D47122C1584DD0028E812 /* Coordinator */,
-				BD51A7B42BD61AEB00106A31 /* AppDelegate.swift */,
-				BD51A7B62BD61AEB00106A31 /* SceneDelegate.swift */,
 				BD006F4F2C120EE300193D38 /* Resources */,
 				BD77146B2C0D8E3500E30EBB /* Model */,
 				BD89F0632BD6300700C26AAC /* View */,
 				BD89F0642BD6301300C26AAC /* Screen */,
-				BD51A7BA2BD61AEB00106A31 /* Main.storyboard */,
-				BD51A7BD2BD61AEC00106A31 /* Assets.xcassets */,
-				BD51A7BF2BD61AEC00106A31 /* LaunchScreen.storyboard */,
 				BD51A7C22BD61AEC00106A31 /* Info.plist */,
 			);
 			path = JumbleBundle;
@@ -176,7 +180,9 @@
 		BD6D47122C1584DD0028E812 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				BD6D47132C1584E80028E812 /* MainCoordinator.swift */,
+				BD6D47132C1584E80028E812 /* Coordinator.swift */,
+				BD6A52E72C15CD6000CD7781 /* MainCoordinator.swift */,
+				BD6A52E52C15CACF00CD7781 /* RxSwiftCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -396,7 +402,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD6D47142C1584E80028E812 /* MainCoordinator.swift in Sources */,
+				BD6D47142C1584E80028E812 /* Coordinator.swift in Sources */,
 				BD89F0612BD62D2D00C26AAC /* TestCollectionViewCell.swift in Sources */,
 				BD006F4C2C120AB200193D38 /* FactoryObservableVC.swift in Sources */,
 				BD7714632C0D835900E30EBB /* RxSwiftTableviewVC.swift in Sources */,
@@ -408,7 +414,9 @@
 				BD8621A92C1356B60020D073 /* CleanArchVC.swift in Sources */,
 				BDAE42D52C1006830031EB5B /* RxSwift + Ext.swift in Sources */,
 				BD8621AB2C1357110020D073 /* CleanArchitectureTableView.swift in Sources */,
+				BD6A52E62C15CACF00CD7781 /* RxSwiftCoordinator.swift in Sources */,
 				BD006F4E2C120D0200193D38 /* TraitsVC.swift in Sources */,
+				BD6A52E82C15CD6000CD7781 /* MainCoordinator.swift in Sources */,
 				BD51A7B52BD61AEB00106A31 /* AppDelegate.swift in Sources */,
 				BD8621AE2C135B2E0020D073 /* UserEntity.swift in Sources */,
 				BD8621B02C135B4C0020D073 /* CreateUserUsecase.swift in Sources */,
