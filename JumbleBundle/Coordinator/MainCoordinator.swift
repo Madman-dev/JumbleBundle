@@ -23,11 +23,8 @@ class MainCoordinator: Coordinator {
     }
     
     func moveToSelectedRow(_ vc: UIViewController) {
-//        let child = RxSwiftCoordinator(navigationController: navigationController)
-//        child.parentCoordinator = self
-//        childCoordinator.append(child)
-//        child.start()
-        
-        navigationController.pushViewController(vc, animated: true)
+        let child = RxSwiftCoordinator(navigationController: navigationController)
+        childCoordinator.append(child)
+        child.start(with: vc)
     }
 }

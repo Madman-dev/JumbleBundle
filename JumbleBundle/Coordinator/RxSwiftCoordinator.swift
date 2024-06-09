@@ -8,16 +8,25 @@
 import UIKit
 
 class RxSwiftCoordinator: Coordinator {
-    weak var parentCoordinator: MainCoordinator?
-    var childCoordinator = [Coordinator]()
+    func start() {
+        // leave?
+    }
+    
     var navigationController: UINavigationController
+    var childCoordinator = [Coordinator]()
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
     
-    func start() {
-        let nextVC = RxSwiftTableviewVC()
-        nextVC.coordinator = self
+    func start(with vc: UIViewController) {
+        if let nextVC = vc as? RxSwiftTableviewVC {
+            nextVC.coordinator = self
+        }
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
+    func pushToViewController(_ vc: UIViewController) {
+        navigationController.pushViewController(vc, animated: true)
     }
 }

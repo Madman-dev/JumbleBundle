@@ -43,6 +43,8 @@ class RxSwiftTableviewVC: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let nextVC = vcData[indexPath.row].vc
         nextVC.title = vcData[indexPath.row].title
-//        coordinator?.moveToViewController(vc: nextVC)
+        
+        coordinator?.pushToViewController(nextVC)
+        tableView.deselectRow(at: indexPath, animated: false)
     }
 }
