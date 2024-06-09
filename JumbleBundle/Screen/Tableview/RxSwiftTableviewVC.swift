@@ -27,6 +27,11 @@ class RxSwiftTableviewVC: UITableViewController {
         print("rxSwift에서 child 갯수는: ", coordinator?.childCoordinator.count)
         print("rxSwift에서 navigation 갯수는: ", coordinator?.navigationController.viewControllers.count)
     }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        coordinator?.didTapBack()
+    }
 
     // MARK: - Table view data source
 

@@ -8,15 +8,17 @@
 import UIKit
 
 class RxSwiftCoordinator: Coordinator {
-    func start() {
-        // leave?
-    }
     
+    weak var parentCoordinator: MainCoordinator?
     var navigationController: UINavigationController
     var childCoordinator = [Coordinator]()
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
+    }
+    
+    func start() {
+        // leave?
     }
     
     func start(with vc: UIViewController) {
@@ -28,5 +30,9 @@ class RxSwiftCoordinator: Coordinator {
     
     func pushToViewController(_ vc: UIViewController) {
         navigationController.pushViewController(vc, animated: true)
+    }
+    
+    func didTapBack() {
+        parentCoordinator?.childDidFinish(self)
     }
 }

@@ -22,9 +22,19 @@ class MainCoordinator: Coordinator {
         navigationController.pushViewController(rootVC, animated: false)
     }
     
-    func moveToSelectedRow(_ vc: UIViewController) {
+    func moveToSelectedRxTableView(_ vc: UIViewController) {
         let child = RxSwiftCoordinator(navigationController: navigationController)
+        child.parentCoordinator = self
         childCoordinator.append(child)
         child.start(with: vc)
+    }
+    
+    func childDidFinish(_ child: Coordinator?) {
+        for (index, coordinator) in childCoordinator.enumerated() {
+            if coordinator === child {
+                childCoordinator.remove(at: index)
+                break
+            }
+        }
     }
 }
