@@ -18,21 +18,24 @@ class RxSwiftCoordinator: Coordinator {
     }
     
     func start() {
-        // leave?
-    }
-    
-    func start(with vc: UIViewController) {
-        if let nextVC = vc as? RxSwiftTableviewVC {
-            nextVC.coordinator = self
-        }
+        let vc = RxSwiftTableviewVC()
+        vc.coordinator = self
         navigationController.pushViewController(vc, animated: true)
     }
     
-    func pushToViewController(_ vc: UIViewController) {
-        navigationController.pushViewController(vc, animated: true)
-    }
+//    func start(with vc: UIViewController) {
+//        if let nextVC = vc as? RxSwiftTableviewVC {
+//            nextVC.coordinator = self
+//        }
+//        navigationController.pushViewController(vc, animated: true)
+//    }
     
-    func didTapBack() {
-        parentCoordinator?.childDidFinish(self)
-    }
+//    func pushToViewController(_ vc: UIViewController) {
+//        navigationController.pushViewController(vc, animated: true)
+//    }
+    
+    // 되돌아가는 메서드 구현 - using didDisappear
+//    func didTapBack() {
+//        parentCoordinator?.childDidFinish(self)
+//    }
 }

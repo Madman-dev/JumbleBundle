@@ -23,6 +23,9 @@
 		BD6A52E62C15CACF00CD7781 /* RxSwiftCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6A52E52C15CACF00CD7781 /* RxSwiftCoordinator.swift */; };
 		BD6A52E82C15CD6000CD7781 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6A52E72C15CD6000CD7781 /* MainCoordinator.swift */; };
 		BD6D47142C1584E80028E812 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6D47132C1584E80028E812 /* Coordinator.swift */; };
+		BD6DCFD42C1D6A3E00440AF2 /* SocialTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6DCFD32C1D6A3E00440AF2 /* SocialTest.swift */; };
+		BD733A202C182B3B002C8DAB /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD733A1F2C182B3B002C8DAB /* LoginCoordinator.swift */; };
+		BD733A222C182CF0002C8DAB /* IntroductionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD733A212C182CF0002C8DAB /* IntroductionController.swift */; };
 		BD7714632C0D835900E30EBB /* RxSwiftTableviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7714622C0D835900E30EBB /* RxSwiftTableviewVC.swift */; };
 		BD7714652C0D839E00E30EBB /* VCData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7714642C0D839E00E30EBB /* VCData.swift */; };
 		BD7714672C0D84B800E30EBB /* RxObservingObservablesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7714662C0D84B800E30EBB /* RxObservingObservablesVC.swift */; };
@@ -75,6 +78,9 @@
 		BD6A52E52C15CACF00CD7781 /* RxSwiftCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftCoordinator.swift; sourceTree = "<group>"; };
 		BD6A52E72C15CD6000CD7781 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		BD6D47132C1584E80028E812 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		BD6DCFD32C1D6A3E00440AF2 /* SocialTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialTest.swift; sourceTree = "<group>"; };
+		BD733A1F2C182B3B002C8DAB /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		BD733A212C182CF0002C8DAB /* IntroductionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionController.swift; sourceTree = "<group>"; };
 		BD7714622C0D835900E30EBB /* RxSwiftTableviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftTableviewVC.swift; sourceTree = "<group>"; };
 		BD7714642C0D839E00E30EBB /* VCData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCData.swift; sourceTree = "<group>"; };
 		BD7714662C0D84B800E30EBB /* RxObservingObservablesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxObservingObservablesVC.swift; sourceTree = "<group>"; };
@@ -187,6 +193,16 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		BD733A1E2C182B23002C8DAB /* Testing */ = {
+			isa = PBXGroup;
+			children = (
+				BD733A1F2C182B3B002C8DAB /* LoginCoordinator.swift */,
+				BD733A212C182CF0002C8DAB /* IntroductionController.swift */,
+				BD6DCFD32C1D6A3E00440AF2 /* SocialTest.swift */,
+			);
+			path = Testing;
+			sourceTree = "<group>";
+		};
 		BD7714682C0D8D4000E30EBB /* MainVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,6 +263,7 @@
 				BD77146C2C0D8E4A00E30EBB /* Tableview */,
 				BDAE42D32C1006750031EB5B /* RxSwift */,
 				BD8621A72C1356A20020D073 /* CleanArchitecture */,
+				BD733A1E2C182B23002C8DAB /* Testing */,
 				BD51A7B82BD61AEB00106A31 /* HubViewController.swift */,
 			);
 			path = Screen;
@@ -404,12 +421,15 @@
 			files = (
 				BD6D47142C1584E80028E812 /* Coordinator.swift in Sources */,
 				BD89F0612BD62D2D00C26AAC /* TestCollectionViewCell.swift in Sources */,
+				BD733A202C182B3B002C8DAB /* LoginCoordinator.swift in Sources */,
 				BD006F4C2C120AB200193D38 /* FactoryObservableVC.swift in Sources */,
+				BD6DCFD42C1D6A3E00440AF2 /* SocialTest.swift in Sources */,
 				BD7714632C0D835900E30EBB /* RxSwiftTableviewVC.swift in Sources */,
 				BD7714652C0D839E00E30EBB /* VCData.swift in Sources */,
 				BD7714672C0D84B800E30EBB /* RxObservingObservablesVC.swift in Sources */,
 				BD89F05C2BD6278000C26AAC /* MainVC.swift in Sources */,
 				BD51A7B92BD61AEB00106A31 /* HubViewController.swift in Sources */,
+				BD733A222C182CF0002C8DAB /* IntroductionController.swift in Sources */,
 				BD77146A2C0D8D9200E30EBB /* MainVC + tableview Ext.swift in Sources */,
 				BD8621A92C1356B60020D073 /* CleanArchVC.swift in Sources */,
 				BDAE42D52C1006830031EB5B /* RxSwift + Ext.swift in Sources */,

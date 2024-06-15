@@ -16,11 +16,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         
-        let navController = UINavigationController()
-        coordiator = MainCoordinator(navigationController: navController)
-        coordiator?.start()
+//        let navController = UINavigationController()
+//        coordiator = MainCoordinator(navigationController: navController)
+//        coordiator?.start()
         
-        window?.rootViewController = navController
+        window?.rootViewController = SocialTest()
         window?.makeKeyAndVisible()
     }
 }

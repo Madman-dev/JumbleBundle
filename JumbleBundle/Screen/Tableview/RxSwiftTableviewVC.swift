@@ -28,10 +28,11 @@ class RxSwiftTableviewVC: UITableViewController {
         print("rxSwift에서 navigation 갯수는: ", coordinator?.navigationController.viewControllers.count)
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        coordinator?.didTapBack()
-    }
+    // navigating back
+//    override func viewDidDisappear(_ animated: Bool) {
+//        super.viewDidDisappear(animated)
+//        coordinator?.didTapBack()
+//    }
 
     // MARK: - Table view data source
 
@@ -49,7 +50,7 @@ class RxSwiftTableviewVC: UITableViewController {
         let nextVC = vcData[indexPath.row].vc
         nextVC.title = vcData[indexPath.row].title
         
-        coordinator?.pushToViewController(nextVC)
+//        coordinator?.pushToViewController(nextVC)
         tableView.deselectRow(at: indexPath, animated: false)
     }
 }
