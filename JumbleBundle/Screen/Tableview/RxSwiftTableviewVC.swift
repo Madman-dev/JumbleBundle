@@ -11,9 +11,11 @@ class RxSwiftTableviewVC: UITableViewController {
 
     weak var coordinator: BaseCoordinator?
     private var vcData: [VCData] = [
-        VCData(title: "Ch 1. Observing Observables", vc: RxObservingObservablesVC()),
-        VCData(title: "Ch 1. Factory Observables", vc: FactoryObservableVC()),
-        VCData(title: "Ch 1. Trait VC", vc: TraitsVC())
+        VCData(title: "Ch 2. Observing Observables", vc: RxObservingObservablesVC()),
+        VCData(title: "Ch 2. Factory Observables", vc: FactoryObservableVC()),
+        VCData(title: "Ch 2. Trait VC", vc: TraitsVC()),
+        VCData(title: "Ch 2. Challenge", vc: Challenge()),
+        VCData(title: "CH 3 Subjects", vc: Challenge()),
     ]
     
     override func viewDidLoad() {
@@ -24,8 +26,8 @@ class RxSwiftTableviewVC: UITableViewController {
     
     override func viewIsAppearing(_ animated: Bool) {
         super.viewIsAppearing(animated)
-        print("rxSwift에서 child 갯수는: ", coordinator?.childCoordinator.count)
-        print("rxSwift에서 navigation 갯수는: ", coordinator?.navigationController.viewControllers.count)
+//        print("rxSwift에서 child 갯수는: ", coordinator?.childCoordinator.count)
+//        print("rxSwift에서 navigation 갯수는: ", coordinator?.navigationController.viewControllers.count)
     }
     
     // navigating back
