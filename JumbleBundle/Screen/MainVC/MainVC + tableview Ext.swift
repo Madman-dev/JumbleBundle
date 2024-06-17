@@ -22,7 +22,7 @@ extension MainVC {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let nextVC = vcData[indexPath.row].vc
         nextVC.title = vcData[indexPath.row].title
-//        coordinator?.moveToSelectedRxTableView(nextVC)
+        self.navigationController?.pushViewController(nextVC, animated: true)
         tableView.deselectRow(at: indexPath, animated: false)
     }
 }

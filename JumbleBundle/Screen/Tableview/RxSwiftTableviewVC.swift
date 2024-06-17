@@ -9,7 +9,7 @@ import UIKit
 
 class RxSwiftTableviewVC: UITableViewController {
 
-    weak var coordinator: RxSwiftCoordinator?
+    weak var coordinator: BaseCoordinator?
     private var vcData: [VCData] = [
         VCData(title: "Ch 1. Observing Observables", vc: RxObservingObservablesVC()),
         VCData(title: "Ch 1. Factory Observables", vc: FactoryObservableVC()),
@@ -49,8 +49,7 @@ class RxSwiftTableviewVC: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let nextVC = vcData[indexPath.row].vc
         nextVC.title = vcData[indexPath.row].title
-        
-//        coordinator?.pushToViewController(nextVC)
+        self.navigationController?.pushViewController(nextVC, animated: true)
         tableView.deselectRow(at: indexPath, animated: false)
     }
 }

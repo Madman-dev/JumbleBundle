@@ -37,6 +37,7 @@
 		BD8621B02C135B4C0020D073 /* CreateUserUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8621AF2C135B4C0020D073 /* CreateUserUsecase.swift */; };
 		BD89F05C2BD6278000C26AAC /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD89F05B2BD6278000C26AAC /* MainVC.swift */; };
 		BD89F0612BD62D2D00C26AAC /* TestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD89F05F2BD62D2D00C26AAC /* TestCollectionViewCell.swift */; };
+		BD9620822C208471001B4F9C /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9620812C208471001B4F9C /* AppCoordinator.swift */; };
 		BDAE42D52C1006830031EB5B /* RxSwift + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAE42D42C1006830031EB5B /* RxSwift + Ext.swift */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +92,7 @@
 		BD8621AF2C135B4C0020D073 /* CreateUserUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserUsecase.swift; sourceTree = "<group>"; };
 		BD89F05B2BD6278000C26AAC /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		BD89F05F2BD62D2D00C26AAC /* TestCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCollectionViewCell.swift; sourceTree = "<group>"; };
+		BD9620812C208471001B4F9C /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		BDAE42D42C1006830031EB5B /* RxSwift + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RxSwift + Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -187,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				BD6D47132C1584E80028E812 /* Coordinator.swift */,
+				BD9620812C208471001B4F9C /* AppCoordinator.swift */,
 				BD6A52E72C15CD6000CD7781 /* MainCoordinator.swift */,
 				BD6A52E52C15CACF00CD7781 /* RxSwiftCoordinator.swift */,
 			);
@@ -425,6 +428,7 @@
 				BD006F4C2C120AB200193D38 /* FactoryObservableVC.swift in Sources */,
 				BD6DCFD42C1D6A3E00440AF2 /* SocialTest.swift in Sources */,
 				BD7714632C0D835900E30EBB /* RxSwiftTableviewVC.swift in Sources */,
+				BD9620822C208471001B4F9C /* AppCoordinator.swift in Sources */,
 				BD7714652C0D839E00E30EBB /* VCData.swift in Sources */,
 				BD7714672C0D84B800E30EBB /* RxObservingObservablesVC.swift in Sources */,
 				BD89F05C2BD6278000C26AAC /* MainVC.swift in Sources */,

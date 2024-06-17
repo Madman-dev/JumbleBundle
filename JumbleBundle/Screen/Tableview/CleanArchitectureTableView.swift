@@ -9,7 +9,7 @@ import UIKit
 
 class CleanArchitectureTableView: UITableViewController {
     
-    weak var coordinator: MainCoordinator?
+    weak var coordinator: BaseCoordinator?
     let vcData = [
         VCData(title: "Clean Architecture", vc: CleanArchVC()),
     ]
@@ -37,5 +37,7 @@ class CleanArchitectureTableView: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let nextVC = vcData[indexPath.row].vc
         nextVC.title = vcData[indexPath.row].title
+        self.navigationController?.pushViewController(nextVC, animated: true)
+        tableView.deselectRow(at: indexPath, animated: false)
     }
 }

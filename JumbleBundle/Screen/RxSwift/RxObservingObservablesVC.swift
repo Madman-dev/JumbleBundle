@@ -11,7 +11,7 @@ import RxSwift
 
 class RxObservingObservablesVC: UIViewController {
     
-    weak var coordinator: MainCoordinator?
+    weak var coordinator: BaseCoordinator?
     
     override func viewDidLoad() {
         super.viewDidLoad()
