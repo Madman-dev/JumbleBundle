@@ -8,22 +8,30 @@
 import UIKit
 
 class ColorTest: UIViewController {
-
+    let label: UILabel = {
+        let label = UILabel()
+        label.textColor = .black
+        label.text = "테스팅 폰트 적용"
+        label.font = .KorFont.bold(size: ._32).name
+        label.textColor = UIColor.blu700
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .white
+        setup()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setup() {
+        view.addSubview(label)
+        NSLayoutConstraint.activate([
+            label.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            label.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            label.heightAnchor.constraint(equalToConstant: 40),
+            label.widthAnchor.constraint(equalToConstant: 150),
+        ])
     }
-    */
 
 }
