@@ -20,8 +20,6 @@ class CleanArchitectureTableView: UITableViewController {
     
     override func viewIsAppearing(_ animated: Bool) {
         super.viewIsAppearing(animated)
-//        print("CleanArchitectureTableView에서 child 갯수는: ", coordinator?.childCoordinator.count)
-//        print("CleanArchitectureTableView에서 navigation 갯수는: ", coordinator?.navigationController.viewControllers.count)
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

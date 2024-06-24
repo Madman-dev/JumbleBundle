@@ -7,15 +7,11 @@
 
 import UIKit
 
-protocol HomeViewControllerDelegate {
-    func pushToNextScreen()
-}
-
 class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var delegate: HomeViewControllerDelegate?
     var tableView = UITableView()
     var vcData: [VCData] = [
+        VCData(title: "Swift", vc: SwiftTableVC()),
         VCData(title: "RxSwift", vc: RxSwiftTableviewVC()),
         VCData(title: "CA", vc: CleanArchitectureTableView())
     ]
@@ -28,8 +24,6 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     override func viewIsAppearing(_ animated: Bool) {
         super.viewIsAppearing(animated)
-//        print("main에서 child 갯수는: ",coordinator?.childCoordinator.count)
-//        print("main에서 navigation 갯수는: ",coordinator?.navigationController.viewControllers.count)
     }
     
     func setup() {
