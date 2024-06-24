@@ -11,7 +11,7 @@ protocol HomeCoordinatorDelegate {
     func pushToNextViewController()
 }
 
-class HomeCoordinator: BaseCoordinator, HomeViewControllerDelegate {
+class HomeCoordinator: BaseCoordinator {
     func pushToNextScreen() {
         delegate?.pushToNextViewController()
     }
@@ -21,7 +21,6 @@ class HomeCoordinator: BaseCoordinator, HomeViewControllerDelegate {
     override func start() {
         print("홈 화면 생성 필요")
         let homeViewController = MainVC()
-        homeViewController.delegate = self
 
         navigationController.viewControllers = [homeViewController]
     }
