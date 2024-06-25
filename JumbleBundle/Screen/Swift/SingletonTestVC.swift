@@ -23,6 +23,35 @@ class SingletonTestVC: UIViewController {
         super.viewIsAppearing(animated)
         // 싱글톤으로 호출하게 되면 호출이 된 이후 되돌아가면 사라진다
 //        Singleton.shared.createToast(superview: view, withMessage: "이런 메시지")
+        
+//        print("생성이 되고 있니?")
+//        print("==========")
+//        print(SingletonTest.shared.count)
+//        print("==========")
+        // testing Singleton init
+        print("initial value: \(SingletonTest.shared.count)")
+        for _ in 0...3 {
+            SingletonTest.shared.count += 1
+            print(SingletonTest.shared.count)
+        }
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        let topsafeArea: CGFloat
+        let bottomSafeArea: CGFloat
+        
+        if #available(iOS 13.0, *) {
+            let window = UIApplication.shared.windows.first
+            let topPadding = window?.safeAreaInsets.top
+            let bottomPadding = window?.safeAreaInsets.bottom
+            let leftPadding = window?.safeAreaInsets.left
+            let rightPadding = window?.safeAreaInsets.right
+            
+            print(topPadding)
+            print(bottomPadding)
+            
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,7 +67,15 @@ class SingletonTestVC: UIViewController {
 //        ToastTest.showMessage(message: "새로운 메시지")
         
         // on top of window?
-        Toast().createToast(message: "이런 메시지")
+//        Toast().createToast(message: "이런 메시지")
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        // without private init - new instances are able to create a new instance of a singleton, leading to data corruption / mismatch / unclear code process
+        let newSingleton = SingletonTest()
+        newSingleton.count = 0
+        print(newSingleton.count)
     }
 }
 
@@ -130,35 +167,45 @@ class ToastMessenger {
 }
 
 // creating a toast messenger on top of window
-class Toast {
-    private var window: UIWindow? {
-        return UIApplication
-            .shared
-            .connectedScenes
-            .flatMap { ($0 as? UIWindowScene)?.windows ?? [] }
-            .first { $0.isKeyWindow }
-    }
+//class Toast {
+//    private var window: UIWindow? {
+//        return UIApplication
+//            .shared
+//            .connectedScenes
+//            .flatMap { ($0 as? UIWindowScene)?.windows ?? [] }
+//            .first { $0.isKeyWindow }
+//    }
+//    
+//    func createToast(message: String) {
+//        let toast = ToastMessage(message: message)
+//        
+//        let textSize = toast.intrinsicContentSize
+//        let toastWidth = UIScreen.main.bounds.width / 9 * 7
+//        let labelHeight = (textSize.width / toastWidth) * 50
+//        let adjustedHeight = max(labelHeight, 60)
+//        
+//        window?.addSubview(toast)
+//        NSLayoutConstraint.activate([
+//            toast.topAnchor.constraint(equalTo: window?.safeAreaLayoutGuide.topAnchor ?? NSLayoutAnchor(), constant: 20),
+//            toast.centerXAnchor.constraint(equalTo: window?.centerXAnchor ?? NSLayoutXAxisAnchor()),
+//            toast.widthAnchor.constraint(equalToConstant: toastWidth),
+//            toast.heightAnchor.constraint(equalToConstant: adjustedHeight)
+//        ])
+//        
+//        UIView.animate(withDuration: 3.0, animations: {
+//            toast.alpha = 0
+//        }) { (_) in
+//            toast.removeFromSuperview()
+//        }
+//    }
+//}
+
+
+// MARK: - Testing Private init
+
+class SingletonTest {
+    static let shared = SingletonTest()
+//    private init() {}
     
-    func createToast(message: String) {
-        let toast = ToastMessage(message: message)
-        
-        let textSize = toast.intrinsicContentSize
-        let toastWidth = UIScreen.main.bounds.width / 9 * 7
-        let labelHeight = (textSize.width / toastWidth) * 50
-        let adjustedHeight = max(labelHeight, 60)
-        
-        window?.addSubview(toast)
-        NSLayoutConstraint.activate([
-            toast.topAnchor.constraint(equalTo: window?.safeAreaLayoutGuide.topAnchor ?? NSLayoutAnchor(), constant: 20),
-            toast.centerXAnchor.constraint(equalTo: window?.centerXAnchor ?? NSLayoutXAxisAnchor()),
-            toast.widthAnchor.constraint(equalToConstant: toastWidth),
-            toast.heightAnchor.constraint(equalToConstant: adjustedHeight)
-        ])
-        
-        UIView.animate(withDuration: 3.0, animations: {
-            toast.alpha = 0
-        }) { (_) in
-            toast.removeFromSuperview()
-        }
-    }
+    var count: Int = 0
 }
