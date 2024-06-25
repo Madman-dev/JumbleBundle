@@ -13,6 +13,7 @@ class SwiftTableVC: UITableViewController {
         VCData(title: "Singleton test", vc: SingletonTestVC()),
         VCData(title: "Font test", vc: FontTestVC()),
         VCData(title: "Color test", vc: ColorTest()),
+        VCData(title: "ToolTip test", vc: ToolTipVC())
     ]
     
     override func viewDidLoad() {
